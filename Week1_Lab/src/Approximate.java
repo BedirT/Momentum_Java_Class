@@ -5,13 +5,13 @@ public class Approximate {
 		
 		// get closer to sqrt(a) where a is not a square.
 		// will give 2 digit accuracy... since I used 100
-		double n = 3;
-		int fr; 
+		int n = 3, fr; 
 		for(fr = 0; ((double)fr/100)*((double)fr/100) < n; fr++){}
 		System.out.println((double)(fr-1)/100);
 		
-		
+
 		// Simpler version
+		
 	}
 
 }
