@@ -12,15 +12,19 @@ public class Exercise6 {
 		
 		ArrayList<Integer> v = new ArrayList<Integer>();
 		
-		System.out.print("Enter the number of integers you want to process: ");
-		int n = sc.nextInt();
+		// System.out.print("Enter the number of integers you want to process: ");
+		// int n = sc.nextInt();
+		// Make it Dynamic :>
 		double tot = 0, sd = 0;
-		
-		for(int i = 0; i < n; i++){
-			System.out.print("Enter next number: ");
+        System.out.print("Enter the next number: ");
+		// for(int i = 0; i < n; i++){
+		while(sc.hasNext()){
 			v.add(sc.nextInt());
-			tot += v.get(i);
+            System.out.print("Enter the next number (If you are done please press Ctrl+D or Cmnd+D): ");
+			tot += v.get(v.size() - 1);
 		}
+		int n = v.size();
+
 		tot /= n;
 		int mx = -1, mn = Integer.MAX_VALUE;
 		for(int i = 0; i < n; i++){
